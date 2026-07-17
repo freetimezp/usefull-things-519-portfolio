@@ -183,9 +183,29 @@ ion-icon {
     background-color: var(--primary-color);
     color: var(--accent-4);
 }
-
 .content {
     padding: 20px 15px 20px 20px;
+}
+
+.wrapper {
+    overflow: auto;
+    max-height: 700px;
+    padding-right: 10px;
+    scroll-behavior: smooth;
+}
+
+.content ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.content ::-webkit-scrollbar-track {
+    background: var(--accent-4);
+}
+
+.content ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: var(--primary-color);
 }
 
 .content h2 {
@@ -315,6 +335,50 @@ section {
 .skills progress::-webkit-progress-value {
     border-radius: 10px;
     background-color: var(--primary-color);
+}
+
+.experiences {
+    text-align: left;
+}
+
+.experience {
+    margin: 15px 0;
+}
+
+.experience p {
+    padding-left: 20px;
+    margin-left: 17px;
+    border-left: 2px solid var(--accent-2);
+    color: var(--accent-2);
+}
+
+.experience h4 {
+    position: relative;
+    padding-left: 25px;
+    color: var(--primary-color);
+    margin: 10px;
+}
+
+.experience h4::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 1px;
+
+    width: 14px;
+    height: 14px;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+}
+
+.experience .date {
+    padding: 5px 10px;
+    background-color: var(--accent-4);
+    color: var(--accent-2);
+    border-radius: 4px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 @media screen and (width >= 1024px) {
