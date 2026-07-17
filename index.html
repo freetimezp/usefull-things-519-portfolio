@@ -206,6 +206,23 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quidem!</p>
                         </div>
                     </section>
+
+                    <h2>My <span class="colored">Contributions</span></h2>
+                    <div class="divider ltr"></div>
+
+                    <section class="contribution">
+                        <div class="wrapper">
+                            <activity-graph
+                                range-start="2026-01-01"
+                                range-end="2026-12-31"
+                                activity-data="2026-07-01,2026-07-02,2026-07-03,2026-07-04,2026-07-05,2026-07-06,2026-07-07"
+                                activity-levels="0,1,2,3,5"
+                                first-day-of-week="1"
+                                lang="de"
+                                i18n='{"activities": "Aktivitäten", "less": "Weniger", "more": "Mehr"}'
+                            ></activity-graph>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
@@ -214,6 +231,11 @@
         <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 
         <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+
+        <script
+            type="module"
+            src="https://cdn.jsdelivr.net/npm/@mariohamann/activity-graph/dist/activity-graph.min.js"
+        ></script>
 
         <script src="./assets/js/main.js"></script>
     </body>

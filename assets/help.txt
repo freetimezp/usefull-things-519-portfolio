@@ -1,2 +1,4 @@
 https://github.com/mattboldt/typed.js
 
+https://github.com/mariohamann/activity-graph
+
