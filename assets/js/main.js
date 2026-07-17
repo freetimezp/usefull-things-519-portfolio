@@ -6,3 +6,21 @@ var typed = new Typed("#typed", {
     showCursor: false,
     loop: true,
 });
+
+const toggleTheme = document.querySelector("#toggleTheme");
+const darkBtn = document.querySelector("#darkBtn");
+const lightBtn = document.querySelector("#lightBtn");
+
+toggleTheme.addEventListener("click", theme);
+
+function theme() {
+    document.body.classList.toggle("light");
+
+    if (document.body.classList.contains("light")) {
+        darkBtn.style.display = "block";
+        lightBtn.style.display = "none";
+    } else {
+        darkBtn.style.display = "none";
+        lightBtn.style.display = "block";
+    }
+}
