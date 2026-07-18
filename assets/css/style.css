@@ -532,6 +532,55 @@ body.light .projects h3 {
     justify-content: flex-start;
 }
 
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.testimonials img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    float: left;
+}
+
+.testimonial-box:first-child {
+    background-color: transparent;
+    margin: auto;
+}
+
+.testimonial-box {
+    background-color: var(--accent-4);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.testimonials ion-icon {
+    color: orangered;
+}
+
+.testimonials h3 {
+    color: var(--primary-color);
+    font-size: 13px;
+}
+
+.testimonials h3 i {
+    font-style: italic;
+    color: var(--accent-1);
+}
+
+.testimonials p {
+    clear: left;
+    margin-top: 30px;
+    text-align: left;
+    font-size: 14px;
+    color: var(--accent-2);
+}
+
 @media screen and (width >= 1024px) {
     .container {
         grid-template-columns: 105px 430px 1fr;
@@ -619,6 +668,10 @@ body.light .projects h3 {
     }
 
     .blogs {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials {
         grid-template-columns: 1fr;
     }
 }
