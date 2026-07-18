@@ -581,6 +581,65 @@ body.light .projects h3 {
     color: var(--accent-2);
 }
 
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.map {
+    padding: 3px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 3px rgba(3, 102, 214, 0.3);
+}
+
+body:not(.light) .map {
+    filter: invert(90%) sepia(100%) hue-rotate(150deg) saturate(100%);
+}
+
+.contact .input {
+    width: 100%;
+    background-color: var(--accent-4);
+    border: 1px solid var(--accent-4);
+    color: var(--accent-2);
+    border-radius: 5px;
+    line-height: 3;
+    outline: none;
+    transition: border-color 0.5s;
+}
+
+.contact .input:hover,
+.contact .input:focus {
+    border-color: var(--primary-color);
+}
+
+.contact .submit {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 5px;
+    transition: background-color 0.5s, filter 0.5s;
+}
+
+.contact .input::placeholder,
+.contact textarea::placeholder {
+    color: var(--accent-3);
+    filter: brightness(2);
+    padding-left: 10px;
+}
+
+body.light .contact .input::placeholder,
+body.light .contact textarea::placeholder {
+    color: var(--accent-3);
+}
+
+.contact .submit:hover {
+    filter: brightness(0.8);
+    cursor: pointer;
+}
+
 @media screen and (width >= 1024px) {
     .container {
         grid-template-columns: 105px 430px 1fr;
@@ -672,6 +731,10 @@ body.light .projects h3 {
     }
 
     .testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    .contact {
         grid-template-columns: 1fr;
     }
 }
